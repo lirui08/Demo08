@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/one"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/two"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <ImageView
+        android:id="@+id/two"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/one"
+        app:layout_constraintRight_toLeftOf="@id/three"
+        app:layout_constraintTop_toTopOf="@id/one"></ImageView>
+
+    <ImageView
+        android:id="@+id/three"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/two"
+        app:layout_constraintRight_toLeftOf="@id/four"
+        app:layout_constraintTop_toTopOf="@id/one"></ImageView>
+
+    <ImageView
+        android:id="@+id/four"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/three"
+        app:layout_constraintRight_toLeftOf="@id/f"
+        app:layout_constraintTop_toTopOf="@id/two" />
+
+    <ImageView
+        android:id="@+id/f"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/four"
+        app:layout_constraintRight_toLeftOf="@id/s"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/s"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/f"
+        app:layout_constraintRight_toLeftOf="@id/se"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/se"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toRightOf="@id/s"
+        app:layout_constraintRight_toLeftOf="@id/e"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/e"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/se"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/n"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintLeft_toRightOf="@id/se"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本"
+        app:layout_constraintBaseline_toBaselineOf="@id/tx1"
+        app:layout_constraintBottom_toBottomOf="@id/tx1"
+        app:layout_constraintLeft_toRightOf="@id/tx1"
+        app:layout_goneMarginLeft="50dp"></TextView>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintCircle="@id/tx1"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="80dp"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="one,two,three,four,f,s,se,e,n"
+        app:layout_constraintTop_toTopOf="parent"
+        app:flow_wrapMode="chain"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

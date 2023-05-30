@@ -14,5 +14,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "新加的   dhfjk ", Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "新加的   dhfjk ", Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "新加的   dhfjk aa", Toast.LENGTH_SHORT).show();
+         Toast.makeText(this, "新加的   dhfjk bb", Toast.LENGTH_SHORT).show();
     }
 }
